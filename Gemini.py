@@ -84,29 +84,8 @@ class CallGemini:
 # Example Usage
 if __name__ == "__main__":
     # Example API key and prompt
-    api_key = "AIzaSyBK1OrJEbtVmQ39y28_FDhNgHiQMiCaApU"
-    screen_size = pyautogui.size()
-    previous_action = ""
-    previous_action = previous_action or "No previous action provided."
-
-    prompt = f"""
-    You are an Investor Relations Manager at a company. Your objective is to collect all email addresses 
-    associated with a given company name by interacting with a computer interface of screen size {screen_size.width}x{screen_size.height}. 
-    You will be provided with a screenshot of the computer screen and the previous action performed: {previous_action}
-
-    Instructions:
-    Analyze the screenshot to identify actionable areas for interaction.
-    Provide a single JSON object for each action, formatted as follows:
-    json
-    '''
-        "action": "click",
-        "coordinates": [120, 45]
-    '''
-    Requirements:
-    - Provide only the JSON object as output, with no additional text or explanation.
-    - Ensure each JSON object corresponds to only one single action.
-    - Maintain precision and accuracy in identifying actionable coordinates assuming the co-ordinates start from [0,0] every time.
-    """
+    
+    
 
     # Initialize the class and generate action coordinates
     gemini = CallGemini(api_key, prompt)
